@@ -1,0 +1,21 @@
+Config { font = "xft:Helvetica Neue:antialiasing=true:size=10"
+       , bgColor = "black"
+       , fgColor = "white"
+       , position = TopW L 450
+       , commands = [ Run Network "wlp2s0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                   , Run MultiCpu ["-t", "<autototal>%", "-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: %"] 10
+                    , Run Swap [] 10
+                    , Run Com "volume.sh" [] "volume" 10
+                    , Run Com "fanspeed.sh" [] "fanspeed" 10
+                    , Run Date "%a %_d %b %Y %H:%M:%S" "date" 10
+                    , Run BatteryP["BAT0"] ["-t", "Battery: <left>%(<acstatus>)","-L","20","-H","50","-h","green","-n","orange","-l","red", "--", "-O", "<fc=green>+</fc>","-o", "<fc=red>-</fc>", "-f", "/sys/class/power_supply/ADP1/online"] 10                    
+                    , Run CoreTemp ["-t", "Temp: <core0>|<core1>C",
+               "-L", "47", "-H", "60",
+               "-l", "lightblue", "-n", "gray90", "-h", "red"] 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ CPU: %multicpu% <fc=#0000FF>|</fc> %coretemp% <fc=#0000FF>|</fc> Fan: <fc=green>%fanspeed%</fc> <fc=#0000FF>|</fc> %wlp2s0% <fc=#0000FF>|</fc> Vol: <fc=green>%volume%</fc> <fc=#0000FF>|</fc> %battery% <fc=#0000FF>|</fc> <fc=#fce94f>%date%</fc>           "
+       }
