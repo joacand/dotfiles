@@ -22,6 +22,7 @@ nm-applet &                     # Sys tray app for networks
 fanscript.sh &                  # Fan control
 xfce4-power-manager &           # Power manager
 sh ~/.fehbg &                   # Set wallpaper
+wallpaper.sh &                  # Random wallpaper
 volumeicon &                    # Volume icon
 #dropboxd &                     # Dropbox application
 xcompmgr &                      # Composite manager
