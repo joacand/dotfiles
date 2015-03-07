@@ -7,6 +7,7 @@ finish=0
 
 trap 'finish=1' SIGUSR1 SIGINT SIGTERM
 
+echo "Fanscript v1.1"
 echo "Initial core0 temp: +$CORE0_TEMP°C"
 echo "Initial core1 temp: +$CORE1_TEMP°C"
 echo " "
@@ -30,19 +31,15 @@ fi
 
 echo $MEASURING_TEMP
 
-if [ $MEASURING_TEMP -le 55 ]
+if [ $MEASURING_TEMP -le 45 ]
 then
     echo "Setting fan to 0 at temp $MEASURING_TEMP"
     sudo acer_ec.pl := 0x94 0xFF
-elif [ $MEASURING_TEMP -le 58 ]
+elif [ $MEASURING_TEMP -le 75 ]
 then
     echo "Setting fan to low at temp $MEASURING_TEMP"
-    sudo acer_ec.pl := 0x94 0x8C
-elif [ $MEASURING_TEMP -le 60 ]
-then
-    echo "Setting fan to medium at temp $MEASURING_TEMP"
-    sudo acer_ec.pl := 0x94 0x6D
-elif [ $MEASURING_TEMP -le 70 ]
+    sudo acer_ec.pl := 0x94 0xAA
+elif [ $MEASURING_TEMP -le 80 ]
 then
     echo "Setting fan to high at temp $MEASURING_TEMP"
     sudo acer_ec.pl := 0x94 0x5A

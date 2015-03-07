@@ -11,7 +11,7 @@ Config { font = "xft:Helvetica Neue:antialiasing=true:size=10"
                     , Run Date "%a %_d %b %Y %H:%M:%S" "date" 10
                     , Run BatteryP["BAT0"] ["-t", "Battery: <left>%(<acstatus>)","-L","20","-H","50","-h","green","-n","orange","-l","red", "--", "-O", "<fc=green>+</fc>","-o", "<fc=red>-</fc>", "-f", "/sys/class/power_supply/ADP1/online"] 10                    
                     , Run CoreTemp ["-t", "Temp: <core0>|<core1>C",
-               "-L", "47", "-H", "60",
+               "-L", "47", "-H", "80",
                "-l", "lightblue", "-n", "gray90", "-h", "red"] 10
                     , Run StdinReader
                     ]
