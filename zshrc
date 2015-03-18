@@ -18,6 +18,7 @@ alias grep='grep --color=auto'
 alias mkdir='mkdir -p -v'
 alias nano='nano -w'
 alias ping='ping -c 5'
+alias mem='egrep --color "'"Mem|Cache|Swap"'" /proc/meminfo'
 
 ## New commands
 alias da='date "+%A, %B %d, %Y [%T]"'
