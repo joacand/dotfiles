@@ -24,7 +24,8 @@ xfce4-power-manager &           # Power manager
 sh ~/.fehbg &                   # Set wallpaper
 wallpaper.sh &                  # Random wallpaper
 volumeicon &                    # Volume icon
-#dropboxd &                     # Dropbox application
+/opt/dropbox/dropboxd &         # Dropbox
+keepass &                       # KeePass
 xcompmgr &                      # Composite manager
 xsetroot -cursor_name left_ptr  # Pointer
 gnome-terminal                  # Terminal on start-up
