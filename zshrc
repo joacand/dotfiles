@@ -136,3 +136,6 @@ compinit
 autoload -U promptinit
 promptinit
 # End of lines added by compinstall
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# End
