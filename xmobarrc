@@ -17,5 +17,5 @@ Config { font = "xft:Helvetica Neue:antialiasing=true:size=10"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ CPU: %multicpu% <fc=#0000FF>|</fc> %coretemp% <fc=#0000FF>|</fc> Fan: <fc=green>%fanspeed%</fc> <fc=#0000FF>|</fc> %wlp2s0% <fc=#0000FF>|</fc> Vol: <fc=green>%volume%</fc> <fc=#0000FF>|</fc> %battery% <fc=#0000FF>|</fc> <fc=#fce94f>%date%</fc>           "
+       , template = "%StdinReader% }{ CPU: %multicpu% <fc=#0000FF>|</fc> %coretemp% <fc=#0000FF>|</fc> Fan: <fc=green>%fanspeed%</fc> <fc=#0000FF>|</fc> %wlp2s0% <fc=#0000FF>|</fc> Vol: <fc=green>%volume%</fc> <fc=#0000FF>|</fc> %battery% <fc=#0000FF>|</fc> <fc=#fce94f>%date%</fc>                    "
        }
