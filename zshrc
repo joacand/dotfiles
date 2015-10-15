@@ -24,6 +24,7 @@ alias mem='egrep --color "'"Mem|Cache|Swap"'" /proc/meminfo'
 alias da='date "+%A, %B %d, %Y [%T]"'
 alias openports='ss --all --numeric --processes --ipv4 --ipv6'
 alias ..='cd ..'
+alias sten='java -jar ~/builds/mylekstuga/lekstuga/dist/einstein-20151015.jar'
 
 # Privileged access
 ##if [ <UID -ne 0 ]; then
