@@ -24,8 +24,9 @@ alias sudo='sudo '
 alias update='sudo pacman -Syu'
 ##fi
 
-## ls
+## list
 alias ls='ls -hF --color=auto'
+alias ll='ls -as --color=auto'
 
 ## Safety
 alias cps='cp -i'
@@ -35,5 +36,18 @@ alias mvs='mv -i'
 ## Other
 alias cd..='cd ..'
 
+# cd and ls in one
+cl() {
+    dir=$1
+    if [[ -z "$dir" ]]; then
+        dir=$HOME
+    fi
+    if [[ -d "$dir" ]]; then
+        cd "$dir"
+        ls
+    else
+        echo "bash: cl: '$dir': Directory not found"
+    fi
+}
 
 PS1='[\u@\h \W]\$ '

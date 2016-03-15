@@ -34,6 +34,7 @@ alias update='sudo pacman -Su'
 
 ## ls
 alias ls='ls -hF --color=auto'
+alias ll='ls -as --color=auto'
 
 ## Safety
 alias cps='cp -i'
