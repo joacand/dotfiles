@@ -6,6 +6,12 @@
 [[ $- != *i* ]] && return
 
 ## Modified commands ## 
+alias ll='ls -l'
+alias gs='git status'
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias gitclean='git clean -d -x -f'
+alias cls='clear'
 alias ls='ls --color=auto'
 alias diff='colordiff'
 alias grep='grep --color=auto'
